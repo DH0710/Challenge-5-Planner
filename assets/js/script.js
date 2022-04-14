@@ -26,6 +26,17 @@ function timeBlockColor() {
     })
 };
 
+function getDate(e) {
+    var getToday = document.querySelector(".date");
+    var getApi = "https://api.weatherapi.com/v1/current.json?key=7d749c5abe52471ab2210801220804&q=" + getCity.value + "&aqi=no";
+    fetch(getApi).then((response) => {
+        return response.json()
+    }).then((data) => {
+        
+        document.querySelector(".currentday").textContent = data.date
+    })
+}
+
 // WHEN I click the save button for that time block
 saveBtn.on("click", function() {
 
