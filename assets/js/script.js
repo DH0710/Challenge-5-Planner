@@ -28,7 +28,7 @@ function timeBlockColor() {
 
 function getDate(e) {
     var getToday = document.querySelector(".date");
-    var getApi = "https://api.weatherapi.com/v1/current.json?key=7d749c5abe52471ab2210801220804&q=" + getCity.value + "&aqi=no";
+    var getApi = "http://api.weatherapi.com/v1/current.json?key=&q=7d749c5abe52471ab2210801220804&q=&aqi=no";
     fetch(getApi).then((response) => {
         return response.json()
     }).then((data) => {
